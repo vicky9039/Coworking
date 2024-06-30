@@ -17,12 +17,12 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Expose 5000
 EXPOSE 5000
 
-# Set an environment variable
-ENV DB_USERNAME myuser
-ENV DB_PASSWORD mypassword
-ENV DB_HOST=127.0.0.1
-ENV DB_PORT=5433
-ENV DB_NAME=mydatabase
+# # Set an environment variable
+# ENV DB_USERNAME myuser
+# ENV DB_PASSWORD mypassword
+# ENV DB_HOST=127.0.0.1
+# ENV DB_PORT=5433
+# ENV DB_NAME=mydatabase
 
 # Run the application when the container starts
 CMD python app.py
