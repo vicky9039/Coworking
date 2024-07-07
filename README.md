@@ -10,7 +10,7 @@ The Coworking Space Service is a set of APIs that enables users to request one-t
 
 ## how to deploy changes
 
-1. Commit the changes and send merge requests for them to the remote repo: https://github.com/bgtestlab/coworking
+1. Commit the changes and send pull requests for them to the remote repo: https://github.com/bgtestlab/coworking
 2. Once merged, check AWS ECR if the newly built ECR image can be found in the repository name 'coworking'
 
 ## how to verify The Application
