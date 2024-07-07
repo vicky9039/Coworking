@@ -2,7 +2,7 @@ FROM python:3.10-slim-buster
 
 WORKDIR /src
 
-COPY ./ .
+COPY ./analytics .
 
 RUN pip install -r requirements.txt
 
