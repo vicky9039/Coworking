@@ -1,4 +1,4 @@
-# Use Python Python 3.10 as the base image
+# Python Python 3.10 as the base image
 FROM python:3.10-slim-bullseye
 
 # Set the working directory inside the container
