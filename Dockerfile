@@ -1,5 +1,5 @@
 # Python Python 3.10 as the base image
-FROM python:3.10.14-slim
+FROM public.ecr.aws/docker/library/python:3.10-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
