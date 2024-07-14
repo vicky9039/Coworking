@@ -45,9 +45,31 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 5
         envFrom:
+        - secretRef:
+            name: dbsecret
         - configMapRef:
             name: dbconfigmap
         env:
+        - name: DB_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: dbconfigmap
+              key: DB_USERNAME
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: dbconfigmap
+              key: DB_NAME
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: dbconfigmap
+              key: DB_HOST
+        - name: DB_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: dbconfigmap
+              key: DB_PORT
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
