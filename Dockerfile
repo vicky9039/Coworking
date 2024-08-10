@@ -8,11 +8,9 @@ RUN apt-get update -y
 
 EXPOSE 5153
 
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
+WORKDIR /app
 
-WORKDIR /workspace
+COPY analytics /app/analytics
+RUN pip install -r /app/analytics/requirements.txt
 
-ADD . /workspace
-
-CMD ["python", "app.py"]
+CMD ["python", "/app/analytics/app.py"]
