@@ -49,25 +49,25 @@ spec:
             name: myconfigmap
         env:
         - name: DB_NAME
-          valueForm:
+          valueFrom:
             configMapKeyRef:
-            name: myconfigmap
-            key: DB_NAME
+              name: myconfigmap
+              key: DB_NAME
         - name: DB_USERNAME
-          valueForm:
+          valueFrom:
             configMapKeyRef:
-            name: myconfigmap
-            key: DB_USERNAME
+              name: myconfigmap
+              key: DB_USERNAME
         - name: DB_HOST
-          valueForm:
+          valueFrom:
             configMapKeyRef:
-            name: myconfigmap
-            key: DB_HOST
+              name: myconfigmap
+              key: DB_HOST
         - name: DB_PORT
-          valueForm:
+          valueFrom:
             configMapKeyRef:
-            name: myconfigmap
-            key: DB_PORT
+              name: myconfigmap
+              key: DB_PORT
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
