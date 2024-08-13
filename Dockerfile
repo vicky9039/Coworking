@@ -1,8 +1,8 @@
 FROM python:3.8.10
 
-ENV DB_USERNAME "myuser"
-ENV DB_PASSWORD "mypassword"
-ENV DB_NAME "mydatabase"
+# ENV DB_USERNAME "myuser"
+# ENV DB_PASSWORD "mypassword"
+# ENV DB_NAME "mydatabase"
 
 RUN apt-get update -y
 
