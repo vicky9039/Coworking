@@ -1,17 +1,17 @@
 version: 0.2
 
-env:
-  parameter-store:
-    DOCKER_USER: dockerhub-user-udacity
-    DOCKER_TOKEN: dockerhub-token-udacity
+# env:
+  # parameter-store:
+    # DOCKER_USER: dockerhub-user-udacity
+    # DOCKER_TOKEN: dockerhub-token-udacity
 
 phases:
   pre_build:
     commands:
       - echo Logging into ECR
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
-      - echo Logging into DockerHub
-      - echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
+      # - echo Logging into DockerHub
+      # - echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
   build:
     commands:
       - echo Starting build at `date`

@@ -1,4 +1,5 @@
-FROM python:3.8.10
+# FROM python:3.8.10
+FROM public.ecr.aws/docker/library/python:3.8.10
 
 # ENV DB_USERNAME "myuser"
 # ENV DB_PASSWORD "mypassword"
