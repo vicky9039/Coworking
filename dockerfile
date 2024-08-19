@@ -11,7 +11,7 @@ RUN apt install build-essential libpq-dev
 # Update python modules to successfully build the required modules
 RUN pip install --upgrade pip setuptools wheel
 
-COPY requirements.txt ./
+# COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
