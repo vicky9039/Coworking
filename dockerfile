@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 # Update the local package index with the latest packages from the repositories
 RUN apt update -y
 
-COPY requirements.txt ./
+COPY ./analytics/requirements.txt ./
 
 # COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
