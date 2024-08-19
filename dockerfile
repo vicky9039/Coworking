@@ -4,9 +4,8 @@ WORKDIR /usr/src/app
 
 # Update the local package index with the latest packages from the repositories
 RUN apt update -y
+RUN apt install docker-ce docker-ce-cli containerd.io
 
-# Install a couple of packages to successfully install postgresql server locally
-RUN apt install build-essential libpq-dev
 
 # Update python modules to successfully build the required modules
 RUN pip install --upgrade pip setuptools wheel
