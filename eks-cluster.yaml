@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: coworking
+  region: us-east-1
+iam:
+  withOIDC: true
+  serviceRoleARN: arn:aws:iam::091020206356:role/eksClusterRole
+managedNodeGroups:
+  - name: ng-1
+    instanceType: t3.small
+    desiredCapacity: 1
+    iam:
+      instanceRoleARN: arn:aws:iam::091020206356:role/AmazonEKSNodeRole
